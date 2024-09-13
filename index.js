@@ -29,8 +29,12 @@
     
     function reverse2(){
         const str = input.value.split('').reduce((accumulator, currentValue)=>(currentValue + accumulator ))
-        let palindrome 
-        if(str === input.value){
+        let palindrome
+        const Palindrome = () => input.value.split('').every((char, index) =>{
+            palindrome = (char === input.value[str.length - index - 1])
+        }) 
+        Palindrome()
+        if(palindrome){
             palindrome = 'yes'
         }else{
             palindrome = 'no'
